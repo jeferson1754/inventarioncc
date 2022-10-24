@@ -1,2 +1,2 @@
-# inventarioncc
-inventario
+<h1>inventario</h1>
+
