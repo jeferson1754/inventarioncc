@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leer código de barras con JS</title>
+</head>
+
+<body>
+  <h1>Leer código de barras con JS y lector físico</h1>
+  <p>Enfoca el input (es decir, dale un clic) y lee un código con el lector. No olvides abrir la consola con F12</p>
+  <input type="text" id="codigo" placeholder="Enfoca este input y usa el lector">
+  <input type="text" id="lol">
+
+  <p></p>
+</body>
+<script src="script.js"></script>
+
+</html>
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const $codigo = document.querySelector("#codigo");
+    $codigo.addEventListener("keydown", evento => {
+      if (evento.keyCode === 13) {
+
+        // El lector ya terminó de leer
+        const codigoDeBarras = $codigo.value;
+        // Aquí ya podemos hacer algo con el código. Yo solo lo imprimiré		
+        // Limpiar el campo
+        $codigo.value = (codigoDeBarras);
+        $codigo.enabled = false;
+      });
+
+
+  });
+
+
+
+</script>
